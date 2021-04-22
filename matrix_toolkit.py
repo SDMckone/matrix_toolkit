@@ -39,20 +39,3 @@ def scale_matrix(matrix1, scalar):
             return_matrix[x][y] *= scalar
 
     return return_matrix
-
-
-def main():
-    matrix1 = [[1,2,3],
-               [4,5,6],
-               [7,8,9]]
-    
-    matrix2 = [[1,2,3],
-               [4,5,6],
-               [7,8,9]]
-    
-    print(add_matrices(matrix1, matrix2))
-    print(subtract_matrices(matrix1, matrix2))
-    print(scale_matrix(matrix1, 4))
-
-if __name__ == '__main__':
-    main()
