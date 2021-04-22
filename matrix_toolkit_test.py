@@ -13,7 +13,7 @@ class TestMatrixToolkit(unittest.TestCase):
         try:
             matrix_toolkit.add_matrices(matrix_A1, matrix_A2)
             self.fail()
-        except Exception as e:
+        except ArithmeticError as e:
             self.assertEqual("Incompatible matrices.", e.args[0])
 
         # Test adding two 2x2 matrices
@@ -51,14 +51,14 @@ class TestMatrixToolkit(unittest.TestCase):
 
     # Test matrix_toolkit's subtract_matrices method
     def test_subtract_matrices(self): 
-        # Test subtracting two matrices with different dimensions
+        # Test subtracting two matrices with different dimensions - causes ArithmeticError
         matrix_A1 = [[1,2],[3,4]]
         matrix_A2 = [[1,2],[3,4],[5,6]]
 
         try:
             matrix_toolkit.subtract_matrices(matrix_A1, matrix_A2)
             self.fail()
-        except Exception as e:
+        except ArithmeticError as e:
             self.assertEqual("Incompatible matrices.", e.args[0])
 
         # Test subtracting two 2x2 matrices
@@ -134,7 +134,44 @@ class TestMatrixToolkit(unittest.TestCase):
 
         self.assertEqual(matrix_toolkit.scale_matrix(matrix_D, scalar_D), resultant_matrix_D)
 
-        
+    # Test matrix_toolkit's vector_dot_product method
+    def test_vector_dot_product(self):
+        # Test getting dot product of vectors with differing size
+        vector_A1 = [1,2]
+        vector_A2 = [1,2,3]
+
+        try:
+            matrix_toolkit.vector_dot_product(vector_A1, vector_A2)
+            self.fail()
+        except ArithmeticError as e:
+            self.assertEqual("Incompatible vectors.", e.args[0])
+
+        # Test getting dot product of 2-element vectors 
+        vector_B1 = [1,2]
+        vector_B2 = [3,4]
+
+        dot_product_B = 11
+
+        self.assertEqual(matrix_toolkit.vector_dot_product(vector_B1, vector_B2), dot_product_B)
+        self.assertEqual(matrix_toolkit.vector_dot_product(vector_B2, vector_B1), dot_product_B)
+
+        # Test getting dot product of 2-element vectors with negatives 
+        vector_C1 = [-1,-2]
+        vector_C2 = [3,-4]
+
+        dot_product_C = 5
+
+        self.assertEqual(matrix_toolkit.vector_dot_product(vector_C1, vector_C2), dot_product_C)
+        self.assertEqual(matrix_toolkit.vector_dot_product(vector_C2, vector_C1), dot_product_C)
+
+        # Test getting dot product of 10-element vectors 
+        vector_D1 = [1,2,3,4,5,6,7,8,9,10]
+        vector_D2 = [11,12,13,14,15,16,17,18,19,20]
+
+        dot_product_D = 935
+
+        self.assertEqual(matrix_toolkit.vector_dot_product(vector_D1, vector_D2), dot_product_D)
+        self.assertEqual(matrix_toolkit.vector_dot_product(vector_D2, vector_D1), dot_product_D)
 
 if __name__ == '__main__':
     unittest.main()
