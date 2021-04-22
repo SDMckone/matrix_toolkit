@@ -3,8 +3,7 @@ Planned features (2D matrices only):
 
   ~~-Matrix addition/subtration~~  
   ~~-Matrix scaling~~  
-  -Matrix dot product  
-  -Matrix cross product  
+  -Matrix multiplication    
   -Matrix determinant  
   -Matrix row echelon form/reduced row echelon form  
   -Matrix transposition  
