@@ -1,4 +1,4 @@
-A program for simple 2D matrix operations.
+A fully tested program for simple 2D matrix operations.
 Planned features (2D matrices only):
 
   ~~-Matrix addition/subtration~~  
@@ -8,4 +8,5 @@ Planned features (2D matrices only):
   -Matrix determinant  
   -Matrix row echelon form/reduced row echelon form  
   -Matrix transposition  
-  -Fully-featured GUI  
+  -Fully-featured GUI 
+  -System tests  
