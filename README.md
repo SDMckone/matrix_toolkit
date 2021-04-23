@@ -3,9 +3,9 @@ Planned features (2D matrices only):
 
   ~~-Matrix addition/subtration~~  
   ~~-Matrix scaling~~  
-  -Matrix multiplication    
+  ~~-Matrix multiplication~~
+  ~~-Matrix transposition~~  
   -Matrix determinant  
-  -Matrix row echelon form/reduced row echelon form  
-  -Matrix transposition  
+  -Matrix row echelon form/reduced row echelon form    
   -Fully-featured GUI  
   -System tests  
