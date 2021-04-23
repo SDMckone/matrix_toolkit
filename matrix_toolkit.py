@@ -31,11 +31,11 @@ def subtract_matrices(matrix1, matrix2):
     return return_matrix
 
 # Returns a scaled matrix
-def scale_matrix(matrix1, scalar):
+def scale_matrix(matrix, scalar):
 
-    return_matrix = copy.deepcopy(matrix1)
-    for x in range(len(matrix1)):
-        for y in range(len(matrix1[x])):
+    return_matrix = copy.deepcopy(matrix)
+    for x in range(len(matrix)):
+        for y in range(len(matrix[x])):
             return_matrix[x][y] *= scalar
 
     return return_matrix
@@ -52,6 +52,11 @@ def vector_dot_product(vector1, vector2):
 
     return sum
 
-# Returns the product of two matrices
+# Returns the transpose of a matrix TODO
+def transpose_matrix(matrix):
+    return "TODO"
+
+# Returns the product of two matrices TODO
 def multiply_matrices(matrix1, matrix2):
     return "TODO"
+
