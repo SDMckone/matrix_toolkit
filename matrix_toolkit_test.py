@@ -212,6 +212,14 @@ class TestMatrixToolkit(unittest.TestCase):
             self.assertEqual("Incompatible matrices.", e.args[0])
 
         # Test getting the product of two 2x2 matrices
+        matrix_1 = [[2]]
+        matrix_2 = [[2]]
+
+        resultant_matrix = [[4]]
+
+        self.assertEqual(matrix_toolkit.multiply_matrices(matrix_1, matrix_2), resultant_matrix)
+
+        # Test getting the product of two 2x2 matrices
         matrix_1 = [[1,2],[3,4]]
         matrix_2 = [[1,2],[3,4]]
 
