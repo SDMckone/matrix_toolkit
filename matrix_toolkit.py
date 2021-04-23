@@ -51,3 +51,7 @@ def vector_dot_product(vector1, vector2):
         sum += vector1[x] * vector2[x]
 
     return sum
+
+# Returns the product of two matrices
+def multiply_matrices(matrix1, matrix2):
+    return "TODO"

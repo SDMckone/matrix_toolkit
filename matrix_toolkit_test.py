@@ -172,6 +172,51 @@ class TestMatrixToolkit(unittest.TestCase):
 
         self.assertEqual(matrix_toolkit.vector_dot_product(vector_D1, vector_D2), dot_product_D)
         self.assertEqual(matrix_toolkit.vector_dot_product(vector_D2, vector_D1), dot_product_D)
+    
+    # Test matrix_toolkit's multiply_matrices method
+    def test_multiply_matrices(self):
+        # Test getting the product of two incompatible matrices
+        matrix_A1 = [[1,2,3],[4,5,6]]
+        matrix_A2 = [[1,2],[3,4]]
+
+        try:
+            matrix_toolkit.multiply_matrices(matrix_A1, matrix_A2)
+            self.fail()
+        except ArithmeticError as e:
+            self.assertEqual("Incompatible matrices.", e.args[0])
+
+        # Test getting the product of two 2x2 matrices
+        matrix_B1 = [[1,2],[3,4]]
+        matrix_B2 = [[1,2],[3,4]]
+
+        resultant_matrix_B = [[7,10],[15,22]]
+
+        self.assertEqual(matrix_toolkit.multiply_matrices(matrix_B1, matrix_B2), resultant_matrix_B)
+
+        # Test getting the product of a 1x2 and 2x5 matrix
+        matrix_C1 = [[1,2]]
+        matrix_C2 = [[1,2,3,4,5],[6,7,8,9,10]]
+
+        resultant_matrix_C = [[13,16,19,22,25]]
+
+        self.assertEqual(matrix_toolkit.multiply_matrices(matrix_C1, matrix_C2), resultant_matrix_C)
+
+        # Test getting the product of a 2x1 and 1x5 matrix
+        matrix_D1 = [[1],[2]]
+        matrix_D2 = [[1,2,3,4,5]]
+
+        resultant_matrix_D = [[1,2,3,4,5],[6,7,8,9,10]]
+
+        self.assertEqual(matrix_toolkit.multiply_matrices(matrix_D1, matrix_D2), resultant_matrix_D)
+
+        # Test getting the product of a 5x2 and 2x3 matrix
+        matrix_E1 = [[1,2],[3,4],[5,6],[7,8],[9,10]]
+        matrix_E2 = [[1,2,3],[4,5,6]]
+
+        resultant_matrix_E = [[9,12,15],[19,26,33],[29,40,51],[39,54,69],[49,68,87]]
+
+        self.assertEqual(matrix_toolkit.multiply_matrices(matrix_E1, matrix_E2), resultant_matrix_E)
+
 
 if __name__ == '__main__':
     unittest.main()
