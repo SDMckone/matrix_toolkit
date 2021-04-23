@@ -5,7 +5,7 @@ Planned features (2D matrices only):
   ~~-Matrix scaling~~  
   ~~-Matrix multiplication~~  
   ~~-Matrix transposition~~  
-  -Matrix row echelon form/reduced row echelon form  
+  -Matrix reduced row echelon form  
   -Matrix inverse  
   -Matrix determinant  
   -Fully-featured GUI  
