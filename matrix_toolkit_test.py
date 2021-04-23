@@ -231,7 +231,7 @@ class TestMatrixToolkit(unittest.TestCase):
         matrix_1 = [[1],[2]]
         matrix_2 = [[1,2,3,4,5]]
 
-        resultant_matrix = [[1,2,3,4,5],[6,7,8,9,10]]
+        resultant_matrix = [[1,2,3,4,5],[2,4,6,8,10]]
 
         self.assertEqual(matrix_toolkit.multiply_matrices(matrix_1, matrix_2), resultant_matrix)
 

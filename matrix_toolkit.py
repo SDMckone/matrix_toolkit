@@ -52,7 +52,7 @@ def vector_dot_product(vector1, vector2):
 
     return sum
 
-# Returns the transpose of a matrix TODO
+# Returns the transpose of a matrix
 def transpose_matrix(matrix):
     transpose = []
     for x in range(len(matrix[0])):
@@ -64,7 +64,18 @@ def transpose_matrix(matrix):
     return transpose
 
 
-# Returns the product of two matrices TODO
+# Returns the product of two matrices
 def multiply_matrices(matrix1, matrix2):
-    return "TODO"
+    transposed_matrix2 = transpose_matrix(copy.deepcopy(matrix2))
+
+    product = []
+    for x in range(len(matrix1)):
+        temp = []
+        for y in range(len(transposed_matrix2)):
+            if len(matrix1[x]) != len(transposed_matrix2[y]):
+                raise ArithmeticError("Incompatible matrices.")
+            temp.append(vector_dot_product(matrix1[x], transposed_matrix2[y]))
+        product.append(temp)
+
+    return product
 
