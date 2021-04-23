@@ -54,7 +54,15 @@ def vector_dot_product(vector1, vector2):
 
 # Returns the transpose of a matrix TODO
 def transpose_matrix(matrix):
-    return "TODO"
+    transpose = []
+    for x in range(len(matrix[0])):
+        temp = []
+        for y in range(len(matrix)):
+            temp.append(matrix[y][x])
+        transpose.append(temp)
+    
+    return transpose
+
 
 # Returns the product of two matrices TODO
 def multiply_matrices(matrix1, matrix2):
