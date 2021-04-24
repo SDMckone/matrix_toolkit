@@ -92,16 +92,16 @@ class TestMatrixToolkit(unittest.TestCase):
         self.assertEqual(matrix_toolkit.subtract_matrices(matrix_1, matrix_2), resultant_matrix)
 
 
-        # Test adding two 3x3 matrices
+        # Test subtracting two 3x3 matrices
         matrix_1 = [[1,2,3],[4,5,6],[7,8,9]]
-        matrix_2 = [[1,2,3],[4,5,6],[7,8,9]]
+        matrix_2 = [[9,8,7],[6,5,4],[3,2,1]]
 
-        resultant_matrix = [[0,0,0],[0,0,0],[0,0,0]]
+        resultant_matrix = [[-8,-6,-4],[-2,0,2],[4,6,8]]
 
         self.assertEqual(matrix_toolkit.subtract_matrices(matrix_1, matrix_2), resultant_matrix)
 
 
-        # Test adding two 5x2 matrices
+        # Test subtracting two 5x2 matrices
         matrix_1 = [[1,2],[3,4],[5,6],[7,8],[9,10]]
         matrix_2 = [[1,2],[3,4],[5,6],[7,8],[9,10]]
 
@@ -110,11 +110,30 @@ class TestMatrixToolkit(unittest.TestCase):
         self.assertEqual(matrix_toolkit.subtract_matrices(matrix_1, matrix_2), resultant_matrix)
 
 
-        # Test adding two 2x5 matrices
+        # Test subtracting two 2x5 matrices
         matrix_1 = [[1,2,3,4,5],[6,7,8,9,10]]
         matrix_2 = [[1,2,3,4,5],[6,7,8,9,10]]
 
         resultant_matrix = [[0,0,0,0,0],[0,0,0,0,0]]
+
+        self.assertEqual(matrix_toolkit.subtract_matrices(matrix_1, matrix_2), resultant_matrix)
+
+        # Test subtracting two 2x5 matrices with negative elements
+        matrix_1 = [[1,2,-3,4,-5],[-6,7,8,-9,-10]]
+        matrix_2 = [[-1,-2,3,-4,5],[6,7,-8,-9,-10]]
+
+        resultant_matrix = [[2,4,-6,8,-10],[-12,0,16,0,0]]
+
+        self.assertEqual(matrix_toolkit.subtract_matrices(matrix_1, matrix_2), resultant_matrix)
+
+        # Test subtracting two 2x5 matrices with float elements
+        matrix_1 = [[1/34,2/27,3/654,4/932,5],[6,7,8/543,9,10/3]]
+        matrix_2 = [[1/5,2/2,3/7,4/332,5/1234432],[6/342,7,8,9/43,10]]
+
+        resultant_matrix = [[-29/170,-25/27,-647/1526,-150/19339,6172155/1234432],[341/57,0,-4336/543,378/43,-20/3]]
+        for x in range(len(resultant_matrix)):
+            for y in range(len(resultant_matrix[x])):
+                resultant_matrix[x][y] = round(resultant_matrix[x][y], DECIMAL_PLACE)
 
         self.assertEqual(matrix_toolkit.subtract_matrices(matrix_1, matrix_2), resultant_matrix)
     

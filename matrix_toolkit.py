@@ -14,7 +14,7 @@ def add_matrices(matrix1, matrix2):
             raise ArithmeticError("Incompatible matrices.")
 
         for y in range(len(matrix1[x])):
-            return_matrix[x][y] = round(return_matrix[x][y] + matrix2[x][y], DECIMAL_PLACE)
+            return_matrix[x][y] = round(matrix1[x][y] + matrix2[x][y], DECIMAL_PLACE)
 
     return return_matrix
 
@@ -29,7 +29,7 @@ def subtract_matrices(matrix1, matrix2):
             raise ArithmeticError("Incompatible matrices.")
 
         for y in range(len(matrix1[x])):
-            return_matrix[x][y] -= matrix2[x][y]
+            return_matrix[x][y] = round(matrix1[x][y] - matrix2[x][y], DECIMAL_PLACE)
 
     return return_matrix
 
