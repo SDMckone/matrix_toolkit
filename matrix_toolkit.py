@@ -63,7 +63,6 @@ def transpose_matrix(matrix):
     
     return transpose
 
-
 # Returns the product of two matrices
 def multiply_matrices(matrix1, matrix2):
     transposed_matrix2 = transpose_matrix(copy.deepcopy(matrix2))
@@ -79,3 +78,10 @@ def multiply_matrices(matrix1, matrix2):
 
     return product
 
+# Returns the row echelon form of a matrix TODO
+def matrix_REF(matrix1):
+    return 'TODO'
+
+# Returns the reduced row echelon form of a matrix TODO
+def matrix_RREF(matrix1):
+    return 'TODO'
