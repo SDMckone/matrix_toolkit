@@ -1,7 +1,8 @@
 import copy
+import decimal
 
 # Decimal place to round franctions to
-DECIMAL_PLACE = 10
+DECIMAL_PLACE = 14
 
 # Returns sum of two matrices
 def add_matrices(matrix1, matrix2):

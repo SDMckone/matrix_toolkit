@@ -2,7 +2,7 @@ import unittest
 import matrix_toolkit
 
 # Decimal place to round franctions to
-DECIMAL_PLACE = 10
+DECIMAL_PLACE = 14
 
 class TestMatrixToolkit(unittest.TestCase):
 
