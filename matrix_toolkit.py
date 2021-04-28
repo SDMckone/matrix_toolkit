@@ -1,8 +1,8 @@
 import copy
-import decimal
 
 # Decimal place to round franctions to
 DECIMAL_PLACE = 14
+
 
 # Returns sum of two matrices
 def add_matrices(matrix1, matrix2):
@@ -19,6 +19,7 @@ def add_matrices(matrix1, matrix2):
 
     return return_matrix
 
+
 # Returns difference of two matrices
 def subtract_matrices(matrix1, matrix2):
     if len(matrix1) != len(matrix2):
@@ -34,9 +35,9 @@ def subtract_matrices(matrix1, matrix2):
 
     return return_matrix
 
+
 # Returns a scaled matrix
 def scale_matrix(matrix, scalar):
-
     return_matrix = copy.deepcopy(matrix)
     for x in range(len(matrix)):
         for y in range(len(matrix[x])):
@@ -44,17 +45,19 @@ def scale_matrix(matrix, scalar):
 
     return return_matrix
 
+
 # Returns the dot product of two vectors
 def vector_dot_product(vector1, vector2):
     if len(vector1) != len(vector2):
         raise ArithmeticError("Incompatible vectors.")
 
-    sum = 0
+    vector_sum = 0
 
     for x in range(len(vector1)):
-        sum += vector1[x] * vector2[x]
+        vector_sum += vector1[x] * vector2[x]
 
     return sum
+
 
 # Returns the transpose of a matrix
 def transpose_matrix(matrix):
@@ -64,8 +67,9 @@ def transpose_matrix(matrix):
         for y in range(len(matrix)):
             temp.append(matrix[y][x])
         transpose.append(temp)
-    
+
     return transpose
+
 
 # Returns the product of two matrices
 def multiply_matrices(matrix1, matrix2):
@@ -82,10 +86,12 @@ def multiply_matrices(matrix1, matrix2):
 
     return product
 
+
 # Returns the row echelon form of a matrix TODO
-def matrix_REF(matrix1):
-    return 'TODO'
+def matrix_ref(matrix1):
+    return matrix1
+
 
 # Returns the reduced row echelon form of a matrix TODO
-def matrix_RREF(matrix1):
-    return 'TODO'
+def matrix_rref(matrix1):
+    return matrix1
