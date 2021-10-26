@@ -1,7 +1,7 @@
 import unittest
 import matrix_toolkit
 
-# Decimal place to round franctions to
+# Decimal place to round fractions to
 DECIMAL_PLACE = 14
 
 
@@ -291,35 +291,35 @@ class TestMatrixToolkit(unittest.TestCase):
 
     # # Test matrix_toolkit's matrix_REF method
     # def test_matrix_REF(self):
-    #     # Test getting the row echeleon form of a 2x2 matrix
+    #     # Test getting the row echelon form of a 2x2 matrix
     #     matrix = [[1,2],[3,4]]
 
     #     resultant_matrix = [[3,4],[0,2/3]]
 
     #     self.assertEqual(matrix_toolkit.matrix_REF(matrix), resultant_matrix)
 
-    #     # Test getting the row echeleon form of a 2x5 matrix
+    #     # Test getting the row echelon form of a 2x5 matrix
     #     matrix = [[1,2,3,4,5],[6,7,8,9,10]]
 
     #     resultant_matrix = [[6,7,8,9,10],[0,5/6,5/3,5/2,10/3]]
 
     #     self.assertEqual(matrix_toolkit.matrix_REF(matrix), resultant_matrix)
 
-    #     # Test getting the row echeleon form of a 7x3 matrix
+    #     # Test getting the row echelon form of a 7x3 matrix
     #     matrix = [[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15],[16,17,18],[19,20,21]]
 
     #     resultant_matrix = [[19,20,21],[0,18/19,36/19],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]]
 
     #     self.assertEqual(matrix_toolkit.matrix_REF(matrix), resultant_matrix)
 
-    #     # Test getting the row echeleon form of a 4x3 matrix with negative elements
+    #     # Test getting the row echelon form of a 4x3 matrix with negative elements
     #     matrix = [[1,2,3],[-4,5,-6],[-7,-8,-9],[10,11,-12]]
 
     #     resultant_matrix = [[10,11,-12],[0,47/5,-54/5],[0,0,-834/47],[0,0,0]]
 
     #     self.assertEqual(matrix_toolkit.matrix_REF(matrix), resultant_matrix)
 
-    #     # Test getting the row echeleon form of a 4x3 matrix with float elements
+    #     # Test getting the row echelon form of a 4x3 matrix with float elements
     #     matrix = [[1/3,2/6,3/2],[4/45,5/234,6],[7/98,8,9/1234],[10/3,11/546,12]]
 
     #     resultant_matrix = [[10/3,11/546,12],[0,203829/25480,-10791/43190],
@@ -329,35 +329,35 @@ class TestMatrixToolkit(unittest.TestCase):
 
     # # Test matrix_toolkit's matrix_RREF method
     # def test_matrix_RREF(self):
-    #     # Test getting the row echeleon form of a 2x2 matrix
+    #     # Test getting the row echelon form of a 2x2 matrix
     #     matrix = [[1,2],[3,4]]
 
     #     resultant_matrix = [[1,0],[0,1]]
 
     #     self.assertEqual(matrix_toolkit.matrix_REF(matrix), resultant_matrix)
 
-    #     # Test getting the row echeleon form of a 2x5 matrix
+    #     # Test getting the row echelon form of a 2x5 matrix
     #     matrix = [[1,2,3,4,5],[6,7,8,9,10]]
 
     #     resultant_matrix = [[1,0,-1,-2,-3],[0,1,2,3,4]]
 
     #     self.assertEqual(matrix_toolkit.matrix_REF(matrix), resultant_matrix)
 
-    #     # Test getting the row echeleon form of a 7x3 matrix
+    #     # Test getting the row echelon form of a 7x3 matrix
     #     matrix = [[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15],[16,17,18],[19,20,21]]
 
     #     resultant_matrix = [[1,0,-1],[0,1,2],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]]
 
     #     self.assertEqual(matrix_toolkit.matrix_REF(matrix), resultant_matrix)
 
-    #     # Test getting the row echeleon form of a 4x3 matrix with negative elements
+    #     # Test getting the row echelon form of a 4x3 matrix with negative elements
     #     matrix = [[1,2,3],[-4,5,-6],[-7,-8,-9],[10,11,-12]]
 
     #     resultant_matrix = [[1,0,0],[0,1,0],[0,0,1],[0,0,0]]
 
     #     self.assertEqual(matrix_toolkit.matrix_REF(matrix), resultant_matrix)
 
-    #     # Test getting the row echeleon form of a 4x3 matrix with float elements
+    #     # Test getting the row echelon form of a 4x3 matrix with float elements
     #     matrix = [[1/3,2/6,3/2],[4/45,5/234,6],[7/98,8,9/1234],[10/3,11/546,12]]
 
     #     resultant_matrix = [[1,0,0],[0,1,0],[0,0,1],[0,0,0]]

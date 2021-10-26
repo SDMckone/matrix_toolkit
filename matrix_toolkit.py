@@ -1,6 +1,6 @@
 import copy
 
-# Decimal place to round franctions to
+# Decimal place to round fractions to
 DECIMAL_PLACE = 14
 
 
@@ -56,7 +56,7 @@ def vector_dot_product(vector1, vector2):
     for x in range(len(vector1)):
         vector_sum += vector1[x] * vector2[x]
 
-    return sum
+    return vector_sum
 
 
 # Returns the transpose of a matrix
